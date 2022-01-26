@@ -1,0 +1,12 @@
+@import './resets', 'variables';
+body{
+    background-color: $softBlue;
+}
+
+p{
+    text-align: center
+}
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
