@@ -1,12 +1,115 @@
-@import './resets', 'variables';
-body{
-    background-color: $softBlue;
-}
-
-p{
-    text-align: center
+@import "./resets", "variables";
+body {
+  background-color: $veryDarkBlueBG;
+  font-family: $fontFamily;
 }
 
 @function weight($weight-name) {
-    @return map-get($font-weights, $weight-name);
+  @return map-get($font-weights, $weight-name);
+}
+
+@mixin alignCenter {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 280px;
+  height: 510px;
+  background-color: $veryDarkBlueCard;
+  margin: 80px auto;
+  border-radius: 15px;
+}
+
+.image-container {
+  padding-top: 20px;
+}
+
+.nft-image {
+  display: block;
+  border-radius: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 88%;
+  height: 60%;
+}
+
+.nft-image:hover {
+    background-image: url('../images/icon-view.svg');
+}
+
+//content under the nft image
+.bottom-content {
+  padding: 20px;
+
+  h2 {
+    font-size: $paragraphFont;
+    color: white;
+    font-weight: map-get($font-weights, bold);
+  }
+  h2:hover{
+    color: $cyan;
+    cursor: pointer;
+  }
+  p {
+    color: $softBlue;
+    font-weight: map-get($font-weights, regular);
+    font-size: 15px;
+    margin-top: 23px;
+  }
+
+  img {
+    margin-right: 5px;
+    align-self: center;
+  }
+  hr {
+    border: 0;
+    border-top: 1px solid $veryDarkBlueLine;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .amount-description {
+    display: flex;
+    justify-content: space-between;
+    font-size: $amountFont;
+  }
+
+  //span content for ethirium and its icon
+  .amount-description span:nth-child(1) {
+    @include alignCenter();
+    color: $cyan;
+  }
+  //days countdown and clock img
+  .amount-description span:nth-child(2) {
+    @include alignCenter();
+  }
+
+  //styling for user info at bottom of card
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  .user-info img {
+    width: 13%;
+    border: solid;
+    border-width: 1.2px;
+    border-color: $white;
+    border-radius: 100%;
+    margin-right: 13px;
+  }
+
+  .user-info p {
+    font-weight: map-get($font-weights, regular);
+    font-size: $amountFont;
+    margin-top: 0px;
+  }
+
+  #user-name {
+    color: $white;
+  }
+  #user-name:hover {
+      cursor: pointer;
+      color: $cyan;
+  }
 }

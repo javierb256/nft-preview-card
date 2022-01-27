@@ -7,10 +7,130 @@
 }
 
 body {
-  background-color: #8bacda;
+  background-color: #0d192b;
+  font-family: "Outfit";
 }
 
-p {
-  text-align: center;
+.container {
+  width: 280px;
+  height: 510px;
+  background-color: #14253d;
+  margin: 80px auto;
+  border-radius: 15px;
+}
+
+.image-container {
+  padding-top: 20px;
+}
+
+.nft-image {
+  display: block;
+  border-radius: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 88%;
+  height: 60%;
+}
+
+.nft-image:hover {
+  background-image: url("../images/icon-view.svg");
+}
+
+.bottom-content {
+  padding: 20px;
+}
+
+.bottom-content h2 {
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+}
+
+.bottom-content h2:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.bottom-content p {
+  color: #8bacda;
+  font-weight: 300;
+  font-size: 15px;
+  margin-top: 23px;
+}
+
+.bottom-content img {
+  margin-right: 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.bottom-content hr {
+  border: 0;
+  border-top: 1px solid #2f415b;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.bottom-content .amount-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+}
+
+.bottom-content .amount-description span:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #00fff7;
+}
+
+.bottom-content .amount-description span:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bottom-content .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bottom-content .user-info img {
+  width: 13%;
+  border: solid;
+  border-width: 1.2px;
+  border-color: white;
+  border-radius: 100%;
+  margin-right: 13px;
+}
+
+.bottom-content .user-info p {
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 0px;
+}
+
+.bottom-content #user-name {
+  color: white;
+}
+
+.bottom-content #user-name:hover {
+  cursor: pointer;
+  color: #00fff7;
 }
 /*# sourceMappingURL=main.css.map */
