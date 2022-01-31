@@ -19,10 +19,12 @@ body {
   background-color: $veryDarkBlueCard;
   margin: 80px auto;
   border-radius: 15px;
+  border-color: $veryDarkBlueCard;
 }
 
 .image-container {
-  padding-top: 20px;
+  position: relative;
+  top: 20px;
 }
 
 .nft-image {
@@ -34,20 +36,40 @@ body {
   height: 60%;
 }
 
-.nft-image:hover {
-    background-image: url('../images/icon-view.svg');
+//properties for overlay when mouse over nft image
+//code example followed on https://www.youtube.com/watch?v=exb2ab72Xhs
+.nft__overlay {
+  position: absolute;
+  top: 0;
+  left: 17px;
+  width: 88%;
+  height: 100%;
+  border-radius: 7px;
+  background: rgba(0, 255, 247, 0.5);
+  opacity: 0;
+  transition: opacity 0.25s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nft__overlay:hover {
+  opacity: 1;
 }
 
 //content under the nft image
 .bottom-content {
   padding: 20px;
+  margin-top: 20px;
 
   h2 {
     font-size: $paragraphFont;
     color: white;
     font-weight: map-get($font-weights, bold);
   }
-  h2:hover{
+  h2:hover {
     color: $cyan;
     cursor: pointer;
   }
@@ -109,7 +131,17 @@ body {
     color: $white;
   }
   #user-name:hover {
-      cursor: pointer;
-      color: $cyan;
+    cursor: pointer;
+    color: $cyan;
   }
+}
+
+//footer
+.attribution {
+  font-family: inherit;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }

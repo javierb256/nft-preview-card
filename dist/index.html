@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFT preview card</title>
+    <title>Frontend Mentor | NFT preview card component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
@@ -12,6 +14,11 @@
         <!--Top half of the card-->
         <div class="image-container">
             <img class="nft-image" src="../images/image-equilibrium.jpg" alt="equilibrium NFT"></img>
+            <!--overlay markkup when mouse is over the nft image-->
+            <div class="nft__overlay">
+                <!--eye icon that is displayed on overlay-->
+                <img src="../images/icon-view.svg" alt="white eyeball">
+            </div>
         </div>
         <!--Bottom content of the card-->
         <div class="bottom-content">
@@ -30,5 +37,11 @@
             </div>
         </div>
     </div>
+    
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Javier Barrera</a>.
+      </div>
 </body>
 </html>

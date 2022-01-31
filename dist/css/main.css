@@ -17,10 +17,12 @@ body {
   background-color: #14253d;
   margin: 80px auto;
   border-radius: 15px;
+  border-color: #14253d;
 }
 
 .image-container {
-  padding-top: 20px;
+  position: relative;
+  top: 20px;
 }
 
 .nft-image {
@@ -32,12 +34,40 @@ body {
   height: 60%;
 }
 
-.nft-image:hover {
-  background-image: url("../images/icon-view.svg");
+.nft__overlay {
+  position: absolute;
+  top: 0;
+  left: 17px;
+  width: 88%;
+  height: 100%;
+  border-radius: 7px;
+  background: rgba(0, 255, 247, 0.5);
+  opacity: 0;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nft__overlay:hover {
+  opacity: 1;
 }
 
 .bottom-content {
   padding: 20px;
+  margin-top: 20px;
 }
 
 .bottom-content h2 {
@@ -132,5 +162,15 @@ body {
 .bottom-content #user-name:hover {
   cursor: pointer;
   color: #00fff7;
+}
+
+.attribution {
+  font-family: inherit;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
 }
 /*# sourceMappingURL=main.css.map */
