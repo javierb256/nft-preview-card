@@ -4,15 +4,18 @@ body {
   font-family: $fontFamily;
 }
 
+//function for retrieving established weight values
 @function weight($weight-name) {
   @return map-get($font-weights, $weight-name);
 }
 
+//set of rules for creating a centered flex box
 @mixin alignCenter {
   display: flex;
   align-items: center;
 }
 
+//main container styling
 .container {
   width: 280px;
   height: 510px;
@@ -22,6 +25,7 @@ body {
   border-color: $veryDarkBlueCard;
 }
 
+//container for image styling
 .image-container {
   position: relative;
   top: 20px;
@@ -141,7 +145,8 @@ body {
   font-family: inherit;
   font-size: 11px;
   text-align: center;
+  color: white;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: $softBlue;
 }
