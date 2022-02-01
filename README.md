@@ -51,6 +51,8 @@ Users should be able to:
 
 To see how you can add code snippets, see below:
 
+To create the overlay I made a div that would contain the overlay color and an <img> that contains the eyeball image
+
 ```html
 <div class="image-container">
             <img class="nft-image" src="images/image-equilibrium.jpg" alt="equilibrium NFT"></img>
@@ -61,7 +63,17 @@ To see how you can add code snippets, see below:
             </div>
         </div>
 ```
+
+The css involved having a class for the overlay properties. Its position would be absolute to have it stack on top of the nft image.
+The background property has an rgba that would have the cyan color and an opacity of 0.5 to make it transparent. Its opacity would be defaulted as 0 to not show up when not hovered over.
+When hovering over the nft image the overlay would change to 1 showing the styling applied. A transition for the opacity effect was added for a cooler effect made.
+
 ```css
+.image-container {
+  position: relative;
+  top: 20px;
+}
+
 .nft__overlay {
   position: absolute;
   top: 0;
@@ -82,6 +94,8 @@ To see how you can add code snippets, see below:
 .nft__overlay:hover {
   opacity: 1;
 }
+
+---
 
 
 ### Useful resources
