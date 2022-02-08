@@ -58,7 +58,7 @@ To create the overlay I made a div that would contain the overlay color and an <
                 <!--eye icon that is displayed on overlay-->
                 <img src="images/icon-view.svg" alt="white eyeball">
             </div>
-        </div>
+</div>
 ```
 
 The css involved having a class for the overlay properties. Its position would be absolute to have it stack on top of the nft image.
